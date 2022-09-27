@@ -1,5 +1,7 @@
-// MENU PARA UTILIZAR LA LISTA, compilarlo con g++ -o main.exe src/main.cpp
-// incluir el header del template de una clase
+// MENU PARA UTILIZAR LA LISTA
+// compilarlo con g++ -o main.exe src/main.cpp
+//
+// incluir el header de de una clase
 #include "List.h"
 #include "iostream"
 using std::cin;
@@ -23,29 +25,34 @@ int main(){
     cin >> opt;
     cout << endl;
 
+    //Mostrar opciones
     switch(opt){
         case 1:
+            //preguntar Elemento a insertar
             cout << "Elemento a insertar: " ;
             cin >> elm;
             lista.insertarInicio(elm);
             break;
         case 2:
+            //preguntar Elemento a insertar
             cout << "Elemento a insertar: " ;
             cin >> elm;
             lista.insertarFinal(elm);
             break;
         case 3:
-            cout << "Elemento eliminado\n";
+            //eliminar primer Elemento de lista
             lista.eliminarPrimero();
             break;
         case 4:
-            cout << "Elemento eliminado\n";
+            //eliminar ultimo Elemento de lista
             lista.eliminarUltimo();
             break;
         case 5:
+            // imprimir lista
             lista.imprimir();
             break;
         case 6:
+            // imprimir mensaje segun si lista esta vacia o no
             if(lista.listaVacia()){
                 cout << "La lista esta vacia" << endl;
             } else {
@@ -57,7 +64,7 @@ int main(){
             break;
         default:
             opt=7;
-            cout << "opcion no valida.\nSaliendo\n";
+            cout << "Opcion no valida.\nSaliendo\n";
     }
     }while(opt!=7);
 }
