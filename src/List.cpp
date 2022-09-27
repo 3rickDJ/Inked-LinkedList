@@ -61,11 +61,11 @@ void List::eliminarPrimero(){
     }
 }
 void List::eliminarUltimo(){
-    if(listaVacia()){
+    Node *p = pList;
+    if(listaVacia() || p->next == 0){
         //si esta vacia mandar mensaje
         std::cout << "No hay elementos.\n";
     }else{
-        Node *p = pList;
         //iterar hasta llegar al penultimo nodo
         while(p->next->next != 0){
             //siguiente nodo
