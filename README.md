@@ -8,8 +8,9 @@ Para compilar necesitarás tener instalado el compilador de GNU para c++, `g++`.
 $ which g++
 /usr/bin/g++
 ```
-Desde la raiz del projecto ejecuta en tu terminal el comando:
+Desde la raiz del projecto ejecuta en tu terminal los comandos:
 ```
+mkdir -vp bin/ obj/
 make
 ```
 Te mostrará una lista de los comandos ejecutados. Y en la carpeta `bin/` se encontrará nuestro binario `main`
